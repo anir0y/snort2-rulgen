@@ -1,25 +1,36 @@
-<html>
-    <title>Snort 2.9 - Web Based Snort Rule Generator</title>
-    <link rel='stylesheet' href='css/snorpy.css' type='text/css'></link>
-    <link rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css"></link>
-    <link rel="stylesheet" href="css/custom.css"></link>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="description" content="Web Based Snort Rule Generator">
-    <meta name="keywords" content="web,based,snort,rule,generator">
-    <meta name="author" content="Anir0y">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snort Rule Generator - Free Online Snort 2.9 IDS Rule Builder Tool</title>
+    <meta name="description" content="Free online Snort rule generator for creating custom IDS/IPS rules. Build Snort 2.9 rules with TCP, UDP, ICMP protocols, content matching, and regex patterns.">
+    <meta name="keywords" content="snort rule generator, snort rules, IDS rules, IPS rules, network security, intrusion detection, snort 2.9, cybersecurity tools">
+    <meta name="author" content="Anir0y">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anir0y.in/snort-rule-generator">
+    <meta property="og:title" content="Snort Rule Generator - Free Online Tool">
+    <meta property="og:description" content="Create custom Snort IDS/IPS rules online with our free rule generator tool">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anir0y.in/snort-rule-generator">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Snort Rule Generator">
+    <meta name="twitter:description" content="Free online Snort rule generator for network security professionals">
+    <link rel='stylesheet' href='css/snorpy.css' type='text/css'>
+    <link rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/custom.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3526678290068011"
          crossorigin="anonymous"></script>
+</head>
 
     <body>
         <!-- Main Container Holding Everything -->
-        <div id="globalcontainer" class="container">
-            <h1 class="text-center"><span class="SNORPY">Snort - RuleGenerator</span></h1>
-            <p class="text-center">A Web Based Snort Rule generator</p>
-            <div class="text-center">
-                <button id="themeToggle" class="btn btn-default">Toggle Theme</button>
-            </div>
+        <main id="globalcontainer" class="container">
+            <header class="text-center">
+                <h1><span class="SNORPY">Snort Rule Generator</span></h1>
+                <p>Free Online Snort 2.9 IDS/IPS Rule Builder Tool</p>
+            </header>
             <div id="particles-js"></div>
 
             <!-- This is the rule header section -->
@@ -51,7 +62,7 @@
                 <option value="ip">ip</option>
             </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <input class="headerelement form-control mb-2" id="srcip" placeholder="Source IP">
             <input class="headerelement form-control" id="srcport" placeholder="Source Port">
         </div>
@@ -62,7 +73,7 @@
             <input class="headerelement form-control mb-2" id="dstip" placeholder="Dest IP">
             <input class="headerelement form-control" id="dstport" placeholder="Dest Port">
         </div>
-        <div class="col-md-1">
+        <div class="col-md-2">
             <input class="headerelement form-control mb-2" id="sid" placeholder="SID">
             <input class="headerelement form-control" id="rev" placeholder="Rev Num">
         </div>
@@ -247,7 +258,19 @@
         <span id="opdstport"></span>
         <span>(</span>
         <span id="opmessage"></span>
-        <span id="opProtocols"></span>
+        <span id="opProtocols">
+            <span id="opHttp"></span>
+            <span id="flagscombined"></span>
+            <span id="optcpdirection"></span>
+            <span id="opudp"></span>
+            <span id="optype"></span>
+            <span id="opcode"></span>
+            <span id="opttl"></span>
+            <span id="opipprotocol"></span>
+            <span id="opdatasize"></span>
+            <span id="opreference"></span>
+            <span id="opthreshold"></span>
+        </span>
         <span id="opcontentContainer"></span>
         <span id="oppcre"></span>
         <span id="opmisc"></span>
@@ -258,11 +281,12 @@
         <span id="oprevnum"></span>
         <span>)</span>
     </div>
-    <div id="copyFeedback" class="text-success text-center" style="display:none;">Copied!</div>
+    <div id="copyFeedback" class="text-success text-center" style="display:none;">Rule copied to clipboard!</div>
+    <div id="GlobalResults" class="text-success text-center" style="display:none;"></div>
 </div>
                 </div>
             </div>
-        </div>
+        </main>
 	</br>
 	</br>
 
@@ -295,5 +319,56 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/snorpy.js"></script>
+    <script>
+    // Simple test to ensure basic functionality works
+    $(document).ready(function(){
+        // Test if jQuery is working
+        console.log('jQuery loaded:', typeof $ !== 'undefined');
+        
+        // Add basic rule generation on form changes
+        function updateRule() {
+            var action = $('#actionForm').val() || '';
+            var protocol = $('#protoForm').val() || '';
+            var srcip = $('#srcip').val() || 'any';
+            var srcport = $('#srcport').val() || 'any';
+            var dstip = $('#dstip').val() || 'any';
+            var dstport = $('#dstport').val() || 'any';
+            var msg = $('#headermessage').val();
+            var sid = $('#sid').val();
+            
+            if (action && protocol) {
+                var rule = action + ' ' + protocol + ' ' + srcip + ' ' + srcport + ' -> ' + dstip + ' ' + dstport + ' (';
+                if (msg) rule += 'msg:"' + msg + '"; ';
+                if (sid) rule += 'sid:' + sid + '; ';
+                rule += ')';
+                $('#innerRuleOutput').text(rule);
+            }
+        }
+        
+        // Bind to form changes
+        $('#actionForm, #protoForm, #srcip, #srcport, #dstip, #dstport, #headermessage, #sid').on('change keyup blur', updateRule);
+        
+        // Fix copy to clipboard functionality
+        $('#innerRuleOutput').on('click', function() {
+            var text = $(this).text();
+            if (text.trim()) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(function() {
+                        $('#copyFeedback').show().delay(2000).fadeOut();
+                    });
+                } else {
+                    // Fallback for older browsers
+                    var textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    $('#copyFeedback').show().delay(2000).fadeOut();
+                }
+            }
+        });
+    });
+    </script>
 
 </html>
