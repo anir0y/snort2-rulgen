@@ -27,26 +27,22 @@
                     <div class="col-md-12">
                 <!-- This is the top line in the header starting with action -->
                 <div id="headerInner1" class="form-group">
-                    <div class="row">
-                        <div class="col-md-2"><select id="actionForm" class="form-control"><option value="">Action</option><option value="alert">alert</option><option value="log">log</option><option value="pass">pass</option><option value="activate">activate</option><option value="dynamic">dynamic</option><option value="drop">drop</option><option value="reject">reject</option><option value="sdrop">sdrop</option></select></div>
-                        <div class="col-md-2"><select id="protoForm" class="form-control"><option value="">Protocol</option><option value="tcp">tcp</option><option value="icmp">icmp</option><option value="udp">udp</option><option value="ip">ip</option></select></div>
-                        <div class="col-md-2"><input class="headerelement form-control" id="srcip" placeholder="source ip"></input></div>
-                        <div class="col-md-2"><input class="headerelement form-control" id="srcport" placeholder="source port"></input></div>
-                        <div class="col-md-1 text-center"><span id="rightarrow">&#xbb;</span></div>
-                        <div class="col-md-2"><input class="headerelement form-control" id="dstip"  placeholder="dest ip"></input></div>
-                        <div class="col-md-2"><input class="headerelement form-control" id="dstport"  placeholder="dest port"></input></div>
-                        <div class="col-md-1"><input class="headerelement form-control" id="sid"  placeholder="sid"></input></div>
-                        <div class="col-md-1"><input class="headerelement form-control" id="rev" placeholder="rev num"></input></div>
-                    </div>
+                    <select id="actionForm" class="form-control"><option value="">Action</option><option value="alert">alert</option><option value="log">log</option><option value="pass">pass</option><option value="activate">activate</option><option value="dynamic">dynamic</option><option value="drop">drop</option><option value="reject">reject</option><option value="sdrop">sdrop</option></select>
+                    <select id="protoForm" class="form-control"><option value="">Protocol</option><option value="tcp">tcp</option><option value="icmp">icmp</option><option value="udp">udp</option><option value="ip">ip</option></select>
+                    <input class="headerelement form-control" id="srcip" placeholder="source ip"></input>
+                    <input class="headerelement form-control" id="srcport" placeholder="source port"></input>
+                    <span id="rightarrow">&#xbb;</span>
+                    <input class="headerelement form-control" id="dstip"  placeholder="dest ip"></input>
+                    <input class="headerelement form-control" id="dstport"  placeholder="dest port"></input>
+                    <input class="headerelement form-control" id="sid"  placeholder="sid"></input>
+                    <input class="headerelement form-control" id="rev" placeholder="rev num"></input>
                 </div>
                 <!-- Second line -->
                 <div id="headerInner2" class="form-group">
-                    <div class="row">
-                        <div class="col-md-6"><input  class="headerelement form-control" id="headermessage" placeholder="Rule Message ( \ Escape special characters)"></input></div>
-                        <div class="col-md-2"><input  class="headerelement form-control" id="classtype" placeholder="Class-Type"></input></div>
-                        <div class="col-md-2"><select  class="headerelement form-control" id="priority"><option value="">Priority</option><option value="priority:1;">1</option><option value="priority:2;">2</option><option value="priority:3;">3</option><option value="priority:4;">4</option><option value="priority:5;">5</option></select></div>
-                        <div class="col-md-2"><input  class="headerelement form-control" id="gid" placeholder="gid"></input></div>
-                    </div>
+                    <input  class="headerelement form-control" id="headermessage" placeholder="Rule Message ( \ Escape special characters)"></input>
+                    <input  class="headerelement form-control" id="classtype" placeholder="Class-Type"></input>
+                    <select  class="headerelement form-control" id="priority"><option value="">Priority</option><option value="priority:1;">1</option><option value="priority:2;">2</option><option value="priority:3;">3</option><option value="priority:4;">4</option><option value="priority:5;">5</option></select>
+                    <input  class="headerelement form-control" id="gid" placeholder="gid"></input>
                 </div>
                     </div>
                 </div>
@@ -148,54 +144,14 @@
                 <hr class="style1">
                 <!-- This holds the threshold tracking and reference input -->
                 <div id="miscOptions" class="form-group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <select id="datasizeEval" class="form-control"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">Data Size</option></select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input id="datasize"type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <select id="reftype" class="form-control"><option value="URL">URL</option><option value="CVE">CVE</option><option value="BUG">BUG</option><option value="MSB">MSB</option><option value="NESS">NESS</option><option value="ARAC">ARAC</option><option value="OSVD">OSVD</option><option selected="selected" value="">Reference</option></select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input id="referencetext" size="40" type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <select id="thresholdtype" class="form-control"><option value="limit">limit</option><option value="threshold">threshold</option><option value="both">both</option><option selected="selected" value="">Threshold Tracking Type</option></select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <select id="trackby" class="form-control"><option value="by_src">by_src</option><option value="by_dst">by_dst</option><option selected="selected" value="">TRK BY</option></select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input id="count" placeholder="Count #" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input id="seconds" placeholder="Seconds" class="form-control"/>
-                            </div>
-                        </div>
-                    </div>
+                    <select id="datasizeEval" class="form-control"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">Data Size</option></select>
+                    <input id="datasize"type="text" class="form-control" />
+                    <select id="reftype" class="form-control"><option value="URL">URL</option><option value="CVE">CVE</option><option value="BUG">BUG</option><option value="MSB">MSB</option><option value="NESS">NESS</option><option value="ARAC">ARAC</option><option value="OSVD">OSVD</option><option selected="selected" value="">Reference</option></select>
+                    <input id="referencetext" size="40" type="text" class="form-control" />
+                    <select id="thresholdtype" class="form-control"><option value="limit">limit</option><option value="threshold">threshold</option><option value="both">both</option><option selected="selected" value="">Threshold Tracking Type</option></select>
+                    <select id="trackby" class="form-control"><option value="by_src">by_src</option><option value="by_dst">by_dst</option><option selected="selected" value="">TRK BY</option></select>
+                    <input id="count" placeholder="Count #" class="form-control"/>
+                    <input id="seconds" placeholder="Seconds" class="form-control"/>
                 </div>
             </div>
                 </div>
@@ -210,34 +166,22 @@
                 <!-- This appears when you click the green plus image -->
                 <div id="contentdiv" class="form-group">
                     <input id="thecontent" placeholder="Content Match" class="form-control"></input>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input class="diditinput form-control" id="theoffset" placeholder="Offset"></input>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="diditinput form-control" id="thedepth" placeholder="Depth"></input>
-                        </div>
-                    </div>
+                    <input class="diditinput form-control" id="theoffset" placeholder="Offset"></input>
+                    <input class="diditinput form-control" id="thedepth" placeholder="Depth"></input>
                     <div class="checkbox">
                         <label><input id="content1nocase" class="check" type="checkbox" value="nocase" /> nocase</label>
                         <label><input id="content1uri" class="check" type="checkbox" value="uri" /> uri</label>
                         <label><input id="content1not" class="check" type="checkbox" value="not" /> not</label>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <div id="contentcheck" class="item contentpluses">
-                                <img src="images/accept.png" width="25" height="25">
-                            </div>
+                    <div class="text-center">
+                        <div id="contentcheck" class="item contentpluses">
+                            <img src="images/accept.png" width="25" height="25">
                         </div>
-                        <div class="col-xs-4">
-                            <div id="contentundo" class="item contentpluses">
-                                <img src="images/undo.png" width="26" height="26">
-                            </div>
+                        <div id="contentundo" class="item contentpluses">
+                            <img src="images/undo.png" width="26" height="26">
                         </div>
-                        <div class="col-xs-4">
-                            <div id="contentcancel" class="item contentpluses">
-                                <img src="images/cancel.png" width="20" height="20">
-                            </div>
+                        <div id="contentcancel" class="item contentpluses">
+                            <img src="images/cancel.png" width="20" height="20">
                         </div>
                     </div>
                 </div>
@@ -259,21 +203,15 @@
                             <label><input id="renewline" class="check" type="checkbox" value="not" /> newline /m</label>
                             <label><input id="rewhitespace" class="check" type="checkbox" value="not" /> whitespace /x</label>
                         </div>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <div id="pcrecheck" class="item contentpluses">
-                                <img src="images/accept.png" width="25" height="25">
-                            </div>
+                    <div class="text-center">
+                        <div id="pcrecheck" class="item contentpluses">
+                            <img src="images/accept.png" width="25" height="25">
                         </div>
-                        <div class="col-xs-4">
-                            <div id="pcreundo" class="item contentpluses">
-                                <img src="images/undo.png" width="26" height="26">
-                            </div>
+                        <div id="pcreundo" class="item contentpluses">
+                            <img src="images/undo.png" width="26" height="26">
                         </div>
-                        <div class="col-xs-4">
-                            <div id="pcrecancel" class="item contentpluses">
-                                <img src="images/cancel.png" width="20" height="20">
-                            </div>
+                        <div id="pcrecancel" class="item contentpluses">
+                            <img src="images/cancel.png" width="20" height="20">
                         </div>
                     </div>
                 </div>

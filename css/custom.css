@@ -64,6 +64,7 @@ body {
     border: 1px solid var(--form-control-border, var(--form-control-border-light));
     color: var(--form-control-text, var(--form-control-text-light));
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    margin-bottom: 10px; /* Add some spacing between form controls */
 }
 
 .form-control:focus {
@@ -76,6 +77,8 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: var(--text-color, var(--text-color-light));
+    display: block; /* Make it a block element for better spacing */
+    margin: 10px 0; /* Add vertical spacing */
 }
 
 .plusexplode {
@@ -85,6 +88,7 @@ body {
 .contentHeaders {
     font-weight: bold;
     color: var(--text-color, var(--text-color-light));
+    margin-bottom: 15px; /* Add spacing below headers */
 }
 
 #GlobalResults {
@@ -114,6 +118,7 @@ body {
 
 .checkbox label {
     margin-right: 15px;
+    margin-bottom: 10px; /* Add spacing below checkboxes */
 }
 
 #innerRuleOutput {
@@ -165,12 +170,14 @@ body {
     top: auto !important;
     background-color: transparent !important;
     border: none !important;
+    padding: 0; /* Remove padding that might cause issues */
 }
 
 #contentplus, #preplus {
     position: static !important;
     left: auto !important;
     top: auto !important;
+    margin-bottom: 15px; /* Add spacing below plus icons */
 }
 
 .contentpluses {
@@ -206,6 +213,10 @@ body {
     -webkit-transform: none !important;
     -moz-transform: none !important;
     -o-transform: none !important;
+}
+
+.text-center {
+    text-align: center;
 }
 
 hr.style1 {
