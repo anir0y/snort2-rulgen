@@ -135,3 +135,83 @@ body {
     text-align: center;
     margin-bottom: 15px;
 }
+
+/* Remove old styles */
+.headerelement {
+    width: auto !important;
+}
+
+.tcpinputs {
+    width: auto !important;
+}
+
+#headermessage {
+    width: auto !important;
+}
+
+#datasizeEval, #reftype, #thresholdtype, #trackby {
+    width: auto !important;
+}
+
+#datasize, #referencetext, #count, #seconds {
+    width: auto !important;
+}
+
+#contentdiv, #pcrediv {
+    position: static !important;
+    height: auto !important;
+    width: auto !important;
+    left: auto !important;
+    top: auto !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#contentplus, #preplus {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+.contentpluses {
+    left: auto !important;
+    top: auto !important;
+}
+
+.check {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+.rulebody,
+.protoOptions,
+.contentMatch,
+.ruleOutput {
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+}
+
+#globalcontainer {
+    min-width: auto !important;
+}
+
+#innerRuleOutput {
+    position: static !important;
+    transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -o-transform: none !important;
+}
+
+hr.style1 {
+    display: none;
+}
+
+.item-overlay.top {
+    display: none;
+}
