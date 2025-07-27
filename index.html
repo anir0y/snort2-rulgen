@@ -9,8 +9,6 @@
     <meta name="keywords" content="web,based,snort,rule,generator">
     <meta name="author" content="Anir0y">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3526678290068011"
-         crossorigin="anonymous"></script>
 
     <body>
         <!-- Main Container Holding Everything -->
@@ -28,46 +26,46 @@
                     <div class="col-md-12">
                 <!-- This is the top line in the header starting with action -->
                 <div id="headerInner1" class="form-group">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <select id="actionForm" class="form-control"><option value="">Action</option><option value="alert">alert</option><option value="log">log</option><option value="pass">pass</option><option value="activate">activate</option><option value="dynamic">dynamic</option><option value="drop">drop</option><option value="reject">reject</option><option value="sdrop">sdrop</option></select>
-                        </div>
-                        <div class="col-md-3">
-                            <select id="protoForm" class="form-control"><option value="">Protocol</option><option value="tcp">tcp</option><option value="icmp">icmp</option><option value="udp">udp</option><option value="ip">ip</option></select>
-                        </div>
-                        <div class="col-md-3">
-                            <input class="headerelement form-control" id="sid" placeholder="sid"></input>
-                        </div>
-                        <div class="col-md-3">
-                            <input class="headerelement form-control" id="rev" placeholder="rev num"></input>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top: 10px;">
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input class="headerelement form-control" id="srcip" placeholder="source ip"></input>
-                                </div>
-                                <div class="col-md-6">
-                                    <input class="headerelement form-control" id="srcport" placeholder="source port"></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <span id="rightarrow" style="font-size: 24px; line-height: 34px;">&#8594;</span>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input class="headerelement form-control" id="dstip" placeholder="dest ip"></input>
-                                </div>
-                                <div class="col-md-6">
-                                    <input class="headerelement form-control" id="dstport" placeholder="dest port"></input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="col-md-2">
+            <select id="actionForm" class="form-control mb-2">
+                <option value="">Action</option>
+                <option value="alert">alert</option>
+                <option value="log">log</option>
+                <option value="pass">pass</option>
+                <option value="activate">activate</option>
+                <option value="dynamic">dynamic</option>
+                <option value="drop">drop</option>
+                <option value="reject">reject</option>
+                <option value="sdrop">sdrop</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select id="protoForm" class="form-control mb-2">
+                <option value="">Protocol</option>
+                <option value="tcp">tcp</option>
+                <option value="icmp">icmp</option>
+                <option value="udp">udp</option>
+                <option value="ip">ip</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input class="headerelement form-control mb-2" id="srcip" placeholder="Source IP">
+            <input class="headerelement form-control" id="srcport" placeholder="Source Port">
+        </div>
+        <div class="col-md-1 text-center" style="font-size: 2em; padding-top: 10px;">
+            &#xbb;
+        </div>
+        <div class="col-md-3">
+            <input class="headerelement form-control mb-2" id="dstip" placeholder="Dest IP">
+            <input class="headerelement form-control" id="dstport" placeholder="Dest Port">
+        </div>
+        <div class="col-md-1">
+            <input class="headerelement form-control mb-2" id="sid" placeholder="SID">
+            <input class="headerelement form-control" id="rev" placeholder="Rev Num">
+        </div>
+    </div>
+</div>
                 <!-- Second line -->
                 <div id="headerInner2" class="form-group">
                     <input  class="headerelement form-control" id="headermessage" placeholder="Rule Message ( \ Escape special characters)"></input>
@@ -250,49 +248,11 @@
     </div>
     <div id="copyFeedback" class="text-success text-center" style="display:none;">Copied!</div>
 </div>
-                    
-                    <!-- Google Ads -->
-                    <div class="ads-section mainsquares mt-3">
-                        <h5 class="ads-header">Ads corner:</h5>
-                        <!-- snort-page -->
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-3526678290068011"
-                             data-ad-slot="3710836603"
-                             data-ad-format="auto"
-                             data-full-width-responsive="true"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
                 </div>
             </div>
-            
         </div>
 	</br>
 	</br>
-
-    <!-- Footer Ads -->
-    <div class="footer-ads-section">
-        <div class="container">
-            <h5 class="ads-header">Footer Ads:</h5>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="autorelaxed"
-                 data-ad-client="ca-pub-3526678290068011"
-                 data-ad-slot="5038894980"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-
-    <!-- Sticky Footer -->
-    <footer class="sticky-footer">
-        <div class="container text-center">
-            <span>&copy; 2024 <a href="https://anir0y.in" target="_blank">anir0y</a></span>
-        </div>
-    </footer>
 
     </body>
     <!-- <script src="js/particles.js"></script> -->
