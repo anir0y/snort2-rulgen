@@ -77,8 +77,8 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: var(--text-color, var(--text-color-light));
-    display: block; /* Make it a block element for better spacing */
-    margin: 10px 0; /* Add vertical spacing */
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .plusexplode {
@@ -141,9 +141,23 @@ body {
     margin-bottom: 15px;
 }
 
-/* Remove old styles */
+/* Header element styles */
 .headerelement {
     width: auto !important;
+    margin-bottom: 5px;
+}
+
+#headerInner1 .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+#headerInner1 .col-md-2,
+#headerInner1 .col-md-3,
+#headerInner1 .col-md-5,
+#headerInner1 .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .tcpinputs {
@@ -225,4 +239,48 @@ hr.style1 {
 
 .item-overlay.top {
     display: none;
+}
+
+/* Sticky Footer */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--mainsquares-bg, var(--mainsquares-bg-light));
+    border-top: 1px solid var(--mainsquares-border, var(--mainsquares-border-light));
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-footer a {
+    color: var(--text-color, var(--text-color-light));
+    text-decoration: none;
+}
+
+.sticky-footer a:hover {
+    text-decoration: underline;
+}
+
+body {
+    padding-bottom: 60px;
+}
+
+/* Google Ads Section */
+.ads-section {
+    text-align: center;
+}
+
+.ads-header {
+    color: var(--text-color, var(--text-color-light));
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Footer Ads Section */
+.footer-ads-section {
+    text-align: center;
+    height: 5px;
+    overflow: hidden;
 }
