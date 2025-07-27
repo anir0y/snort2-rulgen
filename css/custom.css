@@ -278,9 +278,25 @@ body {
     font-size: 14px;
 }
 
-/* Footer Ads Section */
-.footer-ads-section {
+/* Bottom Ads Section */
+.bottom-ads-section {
     text-align: center;
-    height: 5px;
-    overflow: hidden;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Sticky Footer */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--mainsquares-bg, var(--mainsquares-bg-light));
+    border-top: 1px solid var(--mainsquares-border, var(--mainsquares-border-light));
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+body {
+    padding-bottom: 60px;
 }
