@@ -1,13 +1,52 @@
+:root {
+    --background-color-light: #f8f8f8;
+    --text-color-light: #333;
+    --mainsquares-bg-light: #fff;
+    --mainsquares-border-light: #ddd;
+    --form-control-bg-light: #fff;
+    --form-control-border-light: #ccc;
+    --form-control-text-light: #555;
+    --form-control-focus-bg-light: #eee;
+    --form-control-focus-border-light: #aaa;
+    --input-group-addon-bg-light: #e0e0e0;
+    --input-group-addon-border-light: #ccc;
+    --input-group-addon-text-light: #555;
+    --inner-rule-output-bg-light: #f0f0f0;
+    --inner-rule-output-border-light: #ccc;
+    --inner-rule-output-text-light: #333;
+}
+
+[data-theme='dark'] {
+    --background-color: #222;
+    --text-color: #fff;
+    --mainsquares-bg: #333;
+    --mainsquares-border: #444;
+    --form-control-bg: #444;
+    --form-control-border: #555;
+    --form-control-text: #fff;
+    --form-control-focus-bg: #555;
+    --form-control-focus-border: #777;
+    --input-group-addon-bg: #444;
+    --input-group-addon-border: #555;
+    --input-group-addon-text: #fff;
+    --inner-rule-output-bg: #444;
+    --inner-rule-output-border: #555;
+    --inner-rule-output-text: #fff;
+}
+
 body {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--background-color, var(--background-color-light));
+    color: var(--text-color, var(--text-color-light));
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .mainsquares {
-    background-color: #333;
-    border: 1px solid #444;
+    background-color: var(--mainsquares-bg, var(--mainsquares-bg-light));
+    border: 1px solid var(--mainsquares-border, var(--mainsquares-border-light));
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .rulebody {
@@ -15,25 +54,28 @@ body {
 }
 
 #globalcontainer h1 {
-    color: #fff;
+    color: var(--text-color, var(--text-color-light));
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .form-control {
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fff;
+    background-color: var(--form-control-bg, var(--form-control-bg-light));
+    border: 1px solid var(--form-control-border, var(--form-control-border-light));
+    color: var(--form-control-text, var(--form-control-text-light));
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .form-control:focus {
-    background-color: #555;
-    border-color: #777;
-    color: #fff;
+    background-color: var(--form-control-focus-bg, var(--form-control-focus-bg-light));
+    border-color: var(--form-control-focus-border, var(--form-control-focus-border-light));
+    color: var(--form-control-text, var(--form-control-text-light));
 }
 
 #rightarrow {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color, var(--text-color-light));
 }
 
 .plusexplode {
@@ -42,16 +84,16 @@ body {
 
 .contentHeaders {
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color, var(--text-color-light));
 }
 
 #GlobalResults {
     margin-top: 20px;
-    color: #fff;
+    color: var(--text-color, var(--text-color-light));
 }
 
 .check {
-    color: #fff;
+    color: var(--text-color, var(--text-color-light));
 }
 
 .item-overlay.top {
@@ -64,9 +106,10 @@ body {
 }
 
 .input-group-addon {
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fff;
+    background-color: var(--input-group-addon-bg, var(--input-group-addon-bg-light));
+    border: 1px solid var(--input-group-addon-border, var(--input-group-addon-border-light));
+    color: var(--input-group-addon-text, var(--input-group-addon-text-light));
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .checkbox label {
@@ -74,10 +117,21 @@ body {
 }
 
 #innerRuleOutput {
-    background-color: #444;
-    color: #fff;
-    border: 1px solid #555;
+    background-color: var(--inner-rule-output-bg, var(--inner-rule-output-bg-light));
+    color: var(--inner-rule-output-text, var(--inner-rule-output-text-light));
+    border: 1px solid var(--inner-rule-output-border, var(--inner-rule-output-border-light));
     padding: 15px;
     min-height: 150px; /* Adjust as needed */
     overflow-y: auto;
+    border-radius: 8px;
+}
+
+#themeToggle {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.selectedProtoOptions h3 {
+    text-align: center;
+    margin-bottom: 15px;
 }
