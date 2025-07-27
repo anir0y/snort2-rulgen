@@ -1,21 +1,39 @@
+body {
+    background-color: #222;
+    color: #fff;
+}
+
 .mainsquares {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 20px;
     margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .protoOptions,
-    .contentMatch {
-        margin-bottom: 20px;
-    }
+.rulebody {
+    margin-top: 20px;
+}
+
+#globalcontainer h1 {
+    color: #fff;
 }
 
 .form-control {
-    margin-bottom: 10px;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: #555;
+    border-color: #777;
+    color: #fff;
 }
 
 #rightarrow {
     font-size: 24px;
     font-weight: bold;
+    color: #fff;
 }
 
 .plusexplode {
@@ -24,8 +42,42 @@
 
 .contentHeaders {
     font-weight: bold;
+    color: #fff;
 }
 
 #GlobalResults {
     margin-top: 20px;
+    color: #fff;
+}
+
+.check {
+    color: #fff;
+}
+
+.item-overlay.top {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Custom styles for Bootstrap integration */
+.input-group .form-control {
+    flex: 1;
+}
+
+.input-group-addon {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.checkbox label {
+    margin-right: 15px;
+}
+
+#innerRuleOutput {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 15px;
+    min-height: 150px; /* Adjust as needed */
+    overflow-y: auto;
 }
