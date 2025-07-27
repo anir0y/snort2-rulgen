@@ -55,20 +55,38 @@
                 <div id="ip" class="selectedProtoOptions">
                     <h3>IP Options</h3>
                     <div class="form-group">
-                        <select class="ttlevaluator tcpinputs form-control" id="ttlevaluator" ><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">TTL</option></select>
-                        <input class="ttlfield tcpinputs form-control" id="ttl" type="text" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="ttlevaluator tcpinputs form-control" id="ttlevaluator" ><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">TTL</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="ttlfield tcpinputs form-control" id="ttl" type="text" />
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <select class="ipprotoevaluator tcpinputs form-control" id="ipprotoevaluator" size="1"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">IP PROTOCOL</option></select>
-                        <input class="ipprotofield tcpinputs form-control" id="ipprotofield" type="text" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="ipprotoevaluator tcpinputs form-control" id="ipprotoevaluator" size="1"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">IP PROTOCOL</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="ipprotofield tcpinputs form-control" id="ipprotofield" type="text" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- TCP Options -->
                 <div id="tcp" class="selectedProtoOptions">
                     <h3>TCP Options</h3>
                     <div class="form-group">
-                        <select class="tcpinputs form-control" id="httpmethodForm" ><option value='content:"GET"; http_method;'>GET</option><option value='content:"POST"; http_method;'>POST</option><option value='content:"HEAD"; http_method;'>HEAD</option><option value='content:"TRACE"; http_method;'>TRACE</option><option value='content:"PUT"; http_method;'>PUT</option><option value='content:"DELETE"; http_method;'>DELETE</option><option value='content:"CONNECT"; http_method;'>CONNECT</option><option selected="selected" value="">HTTP REQUEST METHOD</option></select>
-                        <select  class="tcpinputs form-control" id="httpstatuscode"><option value="100">100</option><option value="101">101</option><option value="200">200</option><option value="201">201</option><option value="202">202</option><option value="203">203</option><option value="204">204</option><option value="205">205</option><option value="206">206</option><option value="300">300</option><option value="301">301</option><option value="302">302</option><option value="303">303</option><option value="304">304</option><option value="305">305</option><option value="306">306</option><option value="307">307</option><option value="400">400</option><option value="401">401</option><option value="402">402</option><option value="403">403</option><option value="404">404</option><option value="405">405</option><option value="406">406</option><option value="407">407</option><option value="408">408</option><option value="409">409</option><option value="410">410</option><option value="411">411</option><option value="412">412</option><option value="413">413</option><option value="415">415</option><option value="416">416</option><option value="417">417</option><option value="500">500</option><option value="501">501</option><option value="502">502</option><option value="503">503</option><option value="504">504</option><option value="505">505</option><option selected="selected" value="">HTTP RESPONSE</option></select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="tcpinputs form-control" id="httpmethodForm" ><option value='content:"GET"; http_method;'>GET</option><option value='content:"POST"; http_method;'>POST</option><option value='content:"HEAD"; http_method;'>HEAD</option><option value='content:"TRACE"; http_method;'>TRACE</option><option value='content:"PUT"; http_method;'>PUT</option><option value='content:"DELETE"; http_method;'>DELETE</option><option value='content:"CONNECT"; http_method;'>CONNECT</option><option selected="selected" value="">HTTP REQUEST METHOD</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <select  class="tcpinputs form-control" id="httpstatuscode"><option value="100">100</option><option value="101">101</option><option value="200">200</option><option value="201">201</option><option value="202">202</option><option value="203">203</option><option value="204">204</option><option value="205">205</option><option value="206">206</option><option value="300">300</option><option value="301">301</option><option value="302">302</option><option value="303">303</option><option value="304">304</option><option value="305">305</option><option value="306">306</option><option value="307">307</option><option value="400">400</option><option value="401">401</option><option value="402">402</option><option value="403">403</option><option value="404">404</option><option value="405">405</option><option value="406">406</option><option value="407">407</option><option value="408">408</option><option value="409">409</option><option value="410">410</option><option value="411">411</option><option value="412">412</option><option value="413">413</option><option value="415">415</option><option value="416">416</option><option value="417">417</option><option value="500">500</option><option value="501">501</option><option value="502">502</option><option value="503">503</option><option value="504">504</option><option value="505">505</option><option selected="selected" value="">HTTP RESPONSE</option></select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-inline"><input id="ACK" class="check2 opflags" type="checkbox" value="A" /> ACK</label>
@@ -81,8 +99,14 @@
                         <label class="checkbox-inline"><input id="wildcard" class="check2 opflags flagoptions" type="checkbox" value="*" /> *</label>
                     </div>
                     <div class="form-group">
-                        <select class="tcpinputs form-control" id="tcpdirectionForm"><option value="FROM_SERVER">FROM_SERVER</option><option value="TO_SERVER">TO_SERVER</option><option value="TO_CLIENT">TO_CLIENT</option><option value="FROM_CLIENT">FROM_CLIENT</option><option selected="selected" value="">DIRECTION</option></select>
-                        <select  class="tcpinputs form-control" id="tcpstateForm"><option value="established">established</option><option value="stateless">stateless</option><option value="not_established">not_established</option><option selected="selected" value="">TCP STATE</option></select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="tcpinputs form-control" id="tcpdirectionForm"><option value="FROM_SERVER">FROM_SERVER</option><option value="TO_SERVER">TO_SERVER</option><option value="TO_CLIENT">TO_CLIENT</option><option value="FROM_CLIENT">FROM_CLIENT</option><option selected="selected" value="">DIRECTION</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <select  class="tcpinputs form-control" id="tcpstateForm"><option value="established">established</option><option value="stateless">stateless</option><option value="not_established">not_established</option><option selected="selected" value="">TCP STATE</option></select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- UDP Options -->
@@ -96,15 +120,28 @@
                 <div id="icmp" class="selectedProtoOptions">
                     <h3>ICMP Options</h3>
                     <div class="form-group">
-                        <select  class="tcpinputs form-control" id="icmptypeevaluator"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">ICMP TYPE</option></select>
-                        <input  class="tcpinputs form-control" id="icmptype" type="text" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select  class="tcpinputs form-control" id="icmptypeevaluator"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">ICMP TYPE</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <input  class="tcpinputs form-control" id="icmptype" type="text" />
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <select  class="tcpinputs form-control" id="icmpcodeevaluator"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">ICMP CODE</option></select>
-                        <input  class="tcpinputs form-control" id="icmpcode" type="text" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select  class="tcpinputs form-control" id="icmpcodeevaluator"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">ICMP CODE</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <input  class="tcpinputs form-control" id="icmpcode" type="text" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+                <!-- Horozontal Line -->
+                <hr class="style1">
                 <!-- This holds the threshold tracking and reference input -->
                 <div id="miscOptions" class="form-group">
                     <select id="datasizeEval" class="form-control"><option value="&gt;">&gt;</option><option value="&lt;">&lt;</option><option value="=">=</option><option selected="selected" value="">Data Size</option></select>
@@ -124,6 +161,7 @@
                 <div id="contentplus" class="item contentpluses">
                     <p class="contentHeaders">Add Content Match</p>
                     <img  class="plusexplode" id="contentArrow1" src="images/green_plus.png" width="30" height="30">
+                    <div class="item-overlay top"></div>
                 </div>
                 <!-- This appears when you click the green plus image -->
                 <div id="contentdiv" class="form-group">
@@ -147,11 +185,13 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- Horozontal line -->
+                <hr class="style1">
                 <!-- Regex gree plus symbol -->
                 <div  id="preplus"  class="item contentpluses">
                     <p class="contentHeaders">Add Regex Match</p>
                     <img class="plusexplode" id="contentArrow2" src="images/green_plus.png"  width="30" height="30">
+                    <div class="item-overlay top"></div>
                 </div>
                 <!-- The regex panel appears when green plus symbol is clicked -->
                 <div id="pcrediv" class="form-group">
@@ -303,7 +343,7 @@
                     </text>
 
                 </div>
-        		<p class="text-center"><a href="https:///anir0y.in">Created by Anir0y</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/Anir0y/">Github</a></p>
+        		<p style="position: absolute; left: 0; right: 0; bottom: -30px; font-size: 12px;"><a href="https:///anir0y.in">Created by Anir0y</a>&nbsp&nbsp&nbsp<a href="https://github.com/Anir0y/">Github</a></p>
 	   	    <h2 id="GlobalResults">Test</h2>
 
                 
